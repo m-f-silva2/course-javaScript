@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Estyle body -->
+    <link type="text/css" rel="stylesheet" href="css/form-css.css"/>
+    <title>JavaScript</title>
+    <style>
+        .contenedor{
+            position: relative;
+            display: inline-block;
+            text-align: center;
+        }
+        .img-texto{
+            position: absolute;
+            top: 64%;
+            left: 50%;
+            transform: translate(-50%, 0%);
+            background-color: rgb(45, 83, 187);
+            color: white;
+            padding: 4px;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <main><!--En jerarquia esta en la posicion 1-->
+        <h1>Bienvenido</h1>
+    </main>
+    <header><!--En jerarquia esta en la posicion 2-->
+        <h3>Vamos a aprender:</h3>
+    </header>
+    <section>
+        <div>
+            <div class="contenedor">
+                <a href="intro-html/index-introd.html">
+                    <img src="img/img_html.jpeg" name="img-html" alt="logo javscript" width="200" height="130">
+                    <p class="img-texto"><em><i>Ingresar</i></em></p>
+                </a>
+            </div>
+            <div class="contenedor">
+                <a href="intro-css/index-css.html">
+                    <img src="img/img_css.jpeg" name="img-css" alt="logo javscript" width="200" height="130">
+                    <p class="img-texto"><em><i>Ingresar</i></em></p>
+                </a>
+            </div>
+            <div class="contenedor">
+                <a href="intro-js/index-javascript.html">
+                    <img src="img/img_javascript.png" name="img-javascript" alt="logo javscript" width="200" height="130">
+                    <p class="img-texto"><em><i>Ingresar</i></em></p>
+                </a>
+            </div>
+        </div>
+    </section>
+    <article>
+        <h3>Acerca del curso:</h3>
+        <p>Se empezará desde <em><strong>html</strong></em> hasta <em><strong>JavaScript</strong></em>.</p>
+    </article>
+    <footer id="foot"><!--En jerarquia esta en la posicion 3-->
+        <iframe width="100%" src="footer.html" frameborder="0" allowfullscreen></iframe>
+    </footer>
+</body>
+</html>
