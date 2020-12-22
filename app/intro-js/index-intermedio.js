@@ -1,7 +1,27 @@
 //--Codigo Activo--
-var probar;//Guardar los resultados para ver en navegador
-let miArray = ['Hola', 'buen día', 'adiós', 1,2,3,4,5,6,7,8,9];
+//Guardar los resultados para ver en navegador
+var probar;//se ejecuta al final del archivo.
+let miArray = ['Hola', 'buen día', 'adiós', 1,2,3];
+let miObjeto= {a:1, b:2, c:"Hola", d: function(){return "soy una funcion"}, e: true};
 
+//Destructuring Arrays: Desacoplar en variables mas simples
+//No importa si no tienen el mismo nombre como en el array
+let [hola,buen,bye,nUno,nDos,nTres] = miArray;// se usa [ ]
+
+//Ejemplo de separar String de los demas elementos
+let [s1,s2,s3,...resto] = miArray;//(...) : Spread Operator
+
+probar = s1+" "+s2+" "+s3+", numeros: "+resto;
+
+//Destructuring Objetos: Desacoplar en variables mas simples
+//Deben tener el mismo nombre de variable como en el objeto
+//let {a,b,c,d,e} = miObjeto;// se usa { }
+
+//Ejemplo de separar funcion de los demas objetos
+let {d, ...otros} = miObjeto;//(...) : Spread Operator
+//probar = "d: "+d+", otros: "+otros;
+
+/*--- Codigo comentado ---
 
 function mifunction() {
     this.mifunction2 = ()=>{
@@ -13,7 +33,7 @@ function mifunction() {
 const f = new mifunction();
 probar = f.mifunction2;
 
-/*function funcion1(){
+function funcion1(){
     return function funcion2() {
         return this;//sale window por no estar especificamente en un elemento, sino en todos.
     }
@@ -28,13 +48,6 @@ const miFunction = () => {
 }
 
 miFunction();//Ejecutar arrow function
-*/
-
-
-
-
-
-/*--- Codigo comentado ---
 
 -------------------------------------------
     function soloPares(numero){
