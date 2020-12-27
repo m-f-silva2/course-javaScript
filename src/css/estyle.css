@@ -1,0 +1,70 @@
+/*--- Diseño principal ---*/
+* {
+    box-sizing: border-box;
+}
+.menu, .section, .right {
+    float:left;
+    width:20%;
+    text-align:center;
+}
+.menu a {
+    padding:8px;
+    margin-top:7px;
+    display:block;
+    width:100%;
+    color:black;
+}
+.section {
+    width:60%;
+    text-align:justify;
+}
+.right {
+    padding:15px;
+    margin-top:7px;
+}
+
+@media only screen and (max-width:620px) {
+    /* For mobile phones: */
+    .menu, .section, .right {
+        width:100%;
+    }
+}
+
+/*--- Barra de navegacion ---*/
+.nav-bar{
+    width: 230px;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%-50%);
+    display: flex;
+    margin-top: 10px;
+    box-shadow: 0px 2px .1px 0px;
+}
+.nav-bar div{
+    width: 37px;
+    height: 37px;
+    background: #ffffff;
+    transition: all .5s;
+    overflow: hidden;
+}
+.fa{
+    width: 30px;
+    height: 30px;
+    box-sizing: border-box;
+    line-height: 60px;
+    text-align: center;
+    font-size: 1.2rem;
+}
+.nav-bar div span{
+    margin: 0 5px;
+    padding-top: 7px;
+    font-size: .9rem;
+    font-family: 'Alata', sans-serif;
+}
+.nav-bar a{
+    color: black;
+    text-decoration: none;
+}
+.nav-bar div:hover{
+    width: 120px;
+}

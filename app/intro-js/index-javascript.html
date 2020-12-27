@@ -3,57 +3,73 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/png" href="../../src/img/js_icon.png" sizes="64x64">
-    <!-- Estyle body -->
-    <link type="text/css" rel="stylesheet" href="../../src/css/form-css.css"/>
-    <link type="text/css" rel="stylesheet" href="../../src/css/main.css"/>
-    <!--Link de archivo js esta en: index-basico.html-->
+        <!-- Logo -->
+        <link rel="icon" type="image/png" href="../../src/img/js_icon.png" sizes="64x64">
+        <!-- Estyle body -->
+        <link type="text/css" rel="stylesheet" href="../../src/css/estyle.css"/>
     <title>JavaScript</title>
 </head>
-<body>
-    <main><!--En jerarquia esta en la posicion 1-->
-        <div class="container">
-            <div class="main">
-                <a href="#foot"><!--Encontrar el primer elemento con el id 'foot'-->
-                    <img src="../../src/img/footer_icon.png" alt="footer icon" class="fa" aria-hidden="true"/>
-                    <span >Ver footer</span>
-                </a>
-            </div>
-            <div class="main">
-                <a href="../../index.html">
-                    <img src="../../src/img/home.png" alt="home icon" class="fa" aria-hidden="true"/>
-                    <span >Inicio</span>
-                </a>
-            </div>
-            <div class="main">
-                <a href="../intro-html/index-introd.html">
-                    <img src="../../src/img/html_icon.png" alt="html icon" class="fa" aria-hidden="true"/>
-                    <span >Html</span>
-                </a>
-            </div>
-            <div class="main">
-                <a href="../intro-css/index-css.html">
-                    <img src="../../src/img/css_icon.png" alt="css icon" class="fa" aria-hidden="true"/>
-                    <span >Css</span>
-                </a>
-            </div>
-        </div>
+<body style="font-family:Verdana;">
+
+    <!--  Nav  -->
+    <div style="text-align:center;">
         <h1>Introducción a JavaScript</h1>
-    </main>
-    <header>
-        <div>
-            <h3>Básico.</h3>
-            <iframe width="48%" height="250" src="index-basico.js" frameborder="0" allowfullscreen></iframe>
-            <iframe width="48%" height="250" src="index-basico.html" frameborder="0" allowfullscreen></iframe>
+    </div>
+
+    <!--  Section  -->
+    <div style="overflow:auto">
+        <div class="menu">
+            <p> </p>
         </div>
-        <div>
-            <h3>Intermedio.</h3>
-            <iframe width="48%" height="250" src="index-intermedio.js" frameborder="0" allowfullscreen></iframe>
-            <iframe width="48%" height="250" src="index-intermedio.html" frameborder="0" allowfullscreen></iframe>
+        <div class="section">
+            <div class="nav-bar">
+                <div>
+                    <a href="#foot"><!--Encontrar el primer elemento con el id 'foot'-->
+                        <img src="../../src/img/footer_icon.png" alt="footer icon" class="fa" aria-hidden="true"/>
+                        <span >Ver footer</span>
+                    </a>
+                </div>
+                <div>
+                    <a href="../../index.html">
+                        <img src="../../src/img/home.png" alt="home icon" class="fa" aria-hidden="true"/>
+                        <span >Inicio</span>
+                    </a>
+                </div>
+                <div>
+                    <a href="../intro-html/index-introd.html">
+                        <img src="../../src/img/html_icon.png" alt="html icon" class="fa" aria-hidden="true"/>
+                        <span >Html</span>
+                    </a>
+                </div>
+                <div>
+                    <a href="../intro-css/index-css.html">
+                        <img src="../../src/img/css_icon.png" alt="css icon" class="fa" aria-hidden="true"/>
+                        <span >Css</span>
+                    </a>
+                </div>
+            </div>
+            <div>
+                <h3>Básico.</h3>
+                <iframe width="48%" height="250" src="index-basico.js" frameborder="0" allowfullscreen></iframe>
+                <iframe width="48%" height="250" src="index-basico.html" frameborder="0" allowfullscreen></iframe>
+            </div>
+            <div>
+                <h3>Intermedio.</h3>
+                <iframe width="48%" height="250" src="index-intermedio.js" frameborder="0" allowfullscreen></iframe>
+                <iframe width="48%" height="250" src="index-intermedio.html" frameborder="0" allowfullscreen></iframe>
+            </div>
+            <div id="foot">
+                <iframe width="100%" src="../../footer.html" frameborder="0" allowfullscreen></iframe>
+            </div>
         </div>
-    </header>
-    <footer id="foot"><!--En jerarquia esta en la posicion 3-->
-        <iframe width="100%" src="../../footer.html" frameborder="0" allowfullscreen></iframe>
-    </footer>
+
+        <div class="right">
+        </div>
+    </div>
+
+    <!--  Footer  -->
+    <div style="text-align:center;padding:10px;margin-top:7px;">
+        
+    </div>
 </body>
 </html>
