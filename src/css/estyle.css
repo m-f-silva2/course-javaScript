@@ -18,10 +18,19 @@
     width:60%;
     padding-left: 20px;
     text-align:justify;
+    background-color: #eaeaf38f;
+    box-shadow: 1px 0px 6px rgb(125, 125, 125);
+    border-radius: 10px;
+    margin-bottom: 5px;
+    margin-top: 5px;
 }
 .right {
     padding:15px;
     margin-top:7px;
+}
+#foot{
+    box-shadow: 0px -1px 0px 0px;
+    margin-top: 10px;
 }
 
 @media only screen and (max-width:620px) {
@@ -44,7 +53,6 @@
 .nav-bar div{
     width: 37px;
     height: 37px;
-    background: #ffffff;
     transition: all .5s;
     overflow: hidden;
 }
@@ -78,7 +86,7 @@
     height: 200px;
     margin-right: 16px;
     margin-top: 15px;
-    box-shadow: 0 5px 10px rgb(0, 0, .2);
+    box-shadow: 2px 2px 7px rgb(72, 72, 72);
     border-radius: 10px;
     overflow: hidden;
 }

@@ -1,3 +1,4 @@
+//--Codigo Activo--
 var probar;
 
 //---METODOS----
@@ -11,7 +12,8 @@ const persona = {
 probar = persona.nombreCompleto();
 
 
-/*
+
+/*--- Codigo Inactivo ---
 //---FUNCIONES----
 function Sumar(numeros){//(numeros): se toma como objeto.
     const resultado = numeros.num1 + numeros.num2;
@@ -23,15 +25,13 @@ function Sumar(numeros){//(numeros): se toma como objeto.
 
 probar = Sumar({num1:1,num2:2});
 
-
-
-
 //Objeto persona
 let persona = {
     nombre: 'Juan c',
     apellido: 'valdes'
 }
-persona.nombre*/
+persona.nombre
+--- Fin Codigo Inactivo ---*/
 
 
 //Ejecucion

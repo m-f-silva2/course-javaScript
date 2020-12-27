@@ -21,7 +21,10 @@ probar = s1+" "+s2+" "+s3+", numeros: "+resto;
 let {d, ...otros} = miObjeto;//(...) : Spread Operator
 //probar = "d: "+d+", otros: "+otros;
 
-/*--- Codigo comentado ---
+
+
+
+/*--- Codigo Inactivo ---
 
 function mifunction() {
     this.mifunction2 = ()=>{
@@ -116,8 +119,11 @@ miFunction();//Ejecutar arrow function
     }else{
         probar = persona.nombreCompleto()+" no puede tomar alcohol";
     }
--------------------------------------------
-*/
+
+--- Fin Codigo Inactivo ---*/
+
+
+
 
 //Ejecucion
 function ejecutarIntermedio(){
