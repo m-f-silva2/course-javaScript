@@ -16,6 +16,7 @@
 }
 .section {
     width:60%;
+    padding-left: 20px;
     text-align:justify;
 }
 .right {
@@ -67,4 +68,65 @@
 }
 .nav-bar div:hover{
     width: 120px;
+}
+
+/*--- Diseño index ---*/
+.contenedor{
+    position: relative;
+    display: inline-block;
+    width: 180px;
+    height: 200px;
+    margin-right: 16px;
+    margin-top: 15px;
+    box-shadow: 0 5px 10px rgb(0, 0, .2);
+    border-radius: 10px;
+    overflow: hidden;
+}
+#contenedor-img-html::before{
+    background-image: url("../img/img_html.jpeg");
+}
+#contenedor-img-css::before{
+    background-image: url("../img/img_css.jpeg");
+}
+#contenedor-img-js::before{
+    background-image: url("../img/img_js.jpeg");
+}
+.contenedor::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transition: .7s cubic-bezier(.46, 1.48, .18, .81);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.layer{
+    background: #fff;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    transform: translateY(100%);/*Baja el layer*/
+    transition: .7s cubic-bezier(.46, 1.48, .18, .81);
+}
+.layer-content{
+    margin: .6rem;
+    font-family: 'Varela Round', sans-serif;
+    text-align: center;
+}
+.layer-content a{
+    text-decoration: none;/*quitar subrayado del link*/
+    color: black;
+}
+.layer-content a p{
+    color: white;
+    padding: 3px;
+    border-radius: 6px;
+}
+.contenedor:hover .layer{
+    transform: translateY(70%);/*sube el layer*/
+}
+.contenedor:hover::before{
+    transform: scale(1.1);
 }
