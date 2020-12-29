@@ -39,10 +39,9 @@
         width:100%;
     }
 }
-
 /*--- Barra de navegacion ---*/
 .nav-bar{
-    width: 230px;
+    width: 270px;
     top:50%;
     left: 50%;
     transform: translate(-50%-50%);
@@ -77,7 +76,6 @@
 .nav-bar div:hover{
     width: 120px;
 }
-
 /*--- Diseño index ---*/
 .contenedor{
     position: relative;
@@ -90,6 +88,7 @@
     border-radius: 10px;
     overflow: hidden;
 }
+/*Index principal*/
 #contenedor-img-html::before{
     background-image: url("../img/img_html.jpeg");
 }
@@ -98,6 +97,10 @@
 }
 #contenedor-img-js::before{
     background-image: url("../img/img_js.jpeg");
+}
+/*Index js*/
+#contenedor-img-js-intro::before{
+    background-image: url("../img/img_js_intro.png");
 }
 .contenedor::before{
     content: "";
@@ -109,7 +112,8 @@
     background-repeat: no-repeat;
     background-size: cover;
 }
-.layer{
+/*Index principal, Index js*/
+.layer, .layer-js{
     background: #fff;
     position: absolute;
     bottom: 0;
@@ -132,8 +136,13 @@
     padding: 3px;
     border-radius: 6px;
 }
+/*Index principal*/
 .contenedor:hover .layer{
     transform: translateY(70%);/*sube el layer*/
+}
+/*Index js*/
+.contenedor:hover .layer-js{
+    transform: translateY(52%);/*sube el layer*/
 }
 .contenedor:hover::before{
     transform: scale(1.1);

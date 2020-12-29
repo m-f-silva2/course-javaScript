@@ -4,6 +4,28 @@ var probar;//se ejecuta al final del archivo.
 let miArray = ['Hola', 'buen día', 'adiós', 1,2,3];
 let miObjeto= {a:1, b:2, c:"Hola", d: function(){return "soy una funcion"}, e: true};
 
+//Prototype
+function MiObjeto2() {
+    this.getNombreCompleto = function(){
+        return '${this.nombre} ${this.apellido}';
+    }
+    this.setNombre = function(nombre){
+        this.nombre = nombre;
+    }
+    this.setApellido = function(apellido){
+        this.apellido = apellido;
+    }
+}
+//Prototype: guarda valores por defecto si no tienen un valor o esta indefinida.
+MiObjeto2.prototype.nombre = 'vacio';
+MiObjeto2.prototype.apellido = 'vacio';
+
+let objeto1 = new MiObjeto2();
+probar = "nombre: "+objeto1.nombre+" apellido: "+objeto1.apellido;
+
+
+
+/*--- Codigo Inactivo ---
 //Destructuring Arrays: Desacoplar en variables mas simples
 //No importa si no tienen el mismo nombre como en el array
 let [hola,buen,bye,nUno,nDos,nTres] = miArray;// se usa [ ]
@@ -21,11 +43,7 @@ probar = s1+" "+s2+" "+s3+", numeros: "+resto;
 let {d, ...otros} = miObjeto;//(...) : Spread Operator
 //probar = "d: "+d+", otros: "+otros;
 
-
-
-
-/*--- Codigo Inactivo ---
-
+-------------------------------------------
 function mifunction() {
     this.mifunction2 = ()=>{
         return this;
