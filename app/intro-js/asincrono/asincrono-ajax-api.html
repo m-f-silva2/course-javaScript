@@ -1,0 +1,42 @@
+<!--Estilos css del formulario-->
+<link type="text/css" rel="stylesheet" href="../../../src/css/form.css"/>
+
+<!--Ejecucion de JS-->
+<div class="form-css">
+    <h3>Formulario CSS</h3>
+    <form>
+        <div class="form-body">
+            <label for="nombre">Nombre</label><br><!--for: se vincula por medio del id del input-->
+            <input type="text" name="form-nombre" id="form-nombre" placeholder="Escriba su nombre" required><br>
+            <label for="apellido">Apellido</label><br>
+            <input type="text" name="apellido" id="form-apellido" placeholder="Escriba su apellido"><br>
+            <label for="pais">Pais</label>
+            <select name="pais" id="form-pais">
+                <option disabled selected>Seleccione</option><!--Disable,selected: Seleccionado y deshabilita esta opcion-->
+                <option>Colombia</option>
+                <option>Perú</option>
+                <option>Ecuador</option>
+                <option>Brazil</option>
+            </select>
+        </div>
+        <div class="form-footer">
+            <button type="submit" id="form-submit">Enviar</button>
+        </div>
+    </form>
+</div>
+    
+<!--Carga la lista de Ajax-->
+<h5>Lista:</h5>
+<ul id="ajax-api-lista2"></ul>
+<table>
+    <thead>
+        <th>Nombre</th>
+        <th>Apellido</th>
+        <th>Pais</th>
+        <th>Acciones</th>
+    </thead>
+    <tbody id="ajax-api-lista"></tbody>
+</table>
+
+<!--JavaScript-->
+<script src="asincrono-ajax-api.js"></script>

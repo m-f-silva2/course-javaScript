@@ -1,79 +1,25 @@
-<style>
-    /* "*" : Para todos los elementos*/
-    input[type=text],
-    select,button,label{
-        /*Border-box: 
-        * Ajusta el ancho incluyendo el padding,
-        *     para no pasarse del limte de la pagina.
-        * Total del ancho del boton.
-        */
-        box-sizing: border-box;
-        width: 100%;/*Ancho del elemento*/
-    }
-    input[type=text]{/*type=text : toma los elementos del mismo tipo*/
-        padding: 6px 10px; /*Espaciado interior del input*/
-        margin: 10px 0px;/*Margen por fuera del elemento*/
-        border: 1px solid white;
-        border-radius: 0px 0px 10px 10px;/*arribaIzq  arribaDere  abajoDere  abajoIzq*/
-        background-color: rgb(56, 56, 78);
-        color: white;
-    }
-    ::placeholder{/*"::" : pseudoclase o  pseudoelemento*/
-        color: white;
-    }
-    /*Focus: Cuando se da clic en el elemento
-    * Cambia el diseño diseño
-    */
-    input:focus{
-        background: rgb(163, 163, 241);
-        color: black;
-        border: 2px solid rgb(25, 32, 102);
-        border-radius: 0px 0px 10px 10px;/*Toma todos los bordes*/
-    }
-    select{
-        width: 100%;
-        margin: 8px 0px;
-    }
-    button{
-        background-color: rgb(70, 97, 150);
-        border: none;
-        color: white;
-        padding: 8px 8px;/*vertical  horizontal*/
-        text-decoration: none;/*Resetea los estilos que añade el navegador*/
-        margin: 10px 0px;
-        border-radius: 4px;
-        cursor: pointer;/*Cambia el cursor cuando pasa por encima de un elemento*/
-        width: 100px;
-    }
-    button:hover{/*Cuando pas el evento(hover) cambie por los valores del elemento*/
-        background-color: rgb(180, 183, 221);
-    }
-    label{
-        display: block;/*Prioriza los valores de este elemento*/
-    }
-    .container{/*Clase*/
-        border-radius: 10px;
-        background-color: rgb(235, 242, 245);
-        padding: 10px;
-        width: 400px;
-        margin: auto;
-    }
-</style>
-<div class="container">
+<!--Estilos css del formulario-->
+<link type="text/css" rel="stylesheet" href="../../src/css/form.css"/>
+
+<div class="form-css">
     <h3>Formulario CSS</h3>
     <form action="" method="POST" enctype="multipart/form-data">
-        <label for="nombre">Nombre</label><br><!--for: se vincula por medio del id del input-->
-        <input type="text" name="nombre" id="nombre" placeholder="Escriba su nombre" required><br>
-        <label for="apellido">Apellido</label><br>
-        <input type="text" name="apellido" id="apellido" placeholder="Escriba su apellido"><br>
-        <label for="pais">Pais</label>
-        <select name="pais" id="pais" required>
-            <option disabled selected>Seleccione</option><!--Disable,selected: Selecciona pero y deshabilita esta opcion-->
-            <option>Colombia</option>
-            <option>Perú</option>
-            <option>Ecuador</option>
-            <option>Brazil</option>
-        </select><br>
-        <button type="submit">Enviar</button>
+        <div class="form-body">
+            <label for="nombre">Nombre</label><br><!--for: se vincula por medio del id del input-->
+            <input type="text" name="nombre" id="nombre" placeholder="Escriba su nombre" required><br>
+            <label for="apellido">Apellido</label><br>
+            <input type="text" name="apellido" id="apellido" placeholder="Escriba su apellido"><br>
+            <label for="pais">Pais</label>
+            <select name="pais" id="pais" required>
+                <option disabled selected>Seleccione</option><!--Disable,selected: Seleccionado, pero deshabilita esta opcion-->
+                <option>Colombia</option>
+                <option>Perú</option>
+                <option>Ecuador</option>
+                <option>Brazil</option>
+            </select>
+        </div>
+        <div class="form-footer">
+            <button type="submit">Enviar</button>
+        </div>
     </form>
 </div>

@@ -8,7 +8,7 @@ let v_promesa = new Promise((resolve,reject) => {
 async function mifuncion(){
 //await: espera el resultado de la promesa satisfecha, reemplaza la expresion ".then()"
     probar = await v_promesa;
-    console.log(probar);
+    //console.log(probar);
 }
 //Ejecucion de miFuncion
 mifuncion();

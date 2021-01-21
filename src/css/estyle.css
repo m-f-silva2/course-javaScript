@@ -147,3 +147,17 @@
 .contenedor:hover::before{
     transform: scale(1.1);
 }
+
+/*--- Otros Diseños ---*/
+/*Quitar diseño predet. en <ul> */
+.list-style-none{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+/*Diseño button eliminar*/
+.button-delete{
+    background-color: rgb(189, 0, 0);
+    color: white;
+}

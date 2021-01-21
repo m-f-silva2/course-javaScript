@@ -1,0 +1,81 @@
+/*Formulario CSS*/
+.form-css input[type=text],
+.form-css select,
+.form-css button,
+.form-css label{
+    /*Border-box: 
+    * Ajusta el ancho incluyendo el padding,
+    *     para no pasarse del limte de la pagina.
+    * Total del ancho del boton.
+    */
+    box-sizing: border-box;
+    width: 100%;/*Ancho del elemento*/
+}
+.form-css input[type=text]{/*type=text : toma los elementos del mismo tipo*/
+    padding: 6px 10px; /*Espaciado interior del input*/
+    margin: 10px 0px;/*Margen por fuera del elemento*/
+    border: 1px solid white;
+    border-radius: 0px 0px 10px 10px;/*arribaIzq  arribaDere  abajoDere  abajoIzq*/
+    background-color: rgb(44, 61, 94);
+    color: white;
+}
+.form-css ::placeholder{/*"::" : pseudoclase o  pseudoelemento*/
+    color: white;
+}
+.form-css :focus::placeholder{
+    color: rgb(44, 61, 94);
+}
+/*Focus: Cuando se da clic en el elemento
+* Cambia el diseño diseño
+*/
+.form-css input:focus{
+    background:rgb(174, 185, 207);
+    color: black;
+    border: 2px solid rgb(25, 32, 102);
+    border-radius: 0px 0px 10px 10px;/*Toma todos los bordes*/
+}
+.form-css select{
+    width: 100%;
+    margin: 8px 0px;
+}
+.form-css button{
+    background-color: rgb(70, 97, 150);
+    border: none;
+    color: white;
+    padding: 8px 8px;/*vertical  horizontal*/
+    text-decoration: none;/*Resetea los estilos que añade el navegador*/
+    margin: 10px 0px;
+    border-radius: 4px;
+    cursor: pointer;/*Cambia el cursor cuando pasa por encima de un elemento*/
+    width: 100px;
+}
+.form-css button:hover{/*Cuando pas el evento(hover) cambie por los valores del elemento*/
+    background-color: rgb(180, 183, 221);
+    color: rgb(29, 34, 112);
+}
+.form-css label{
+    display: block;/*Prioriza los valores de este elemento*/
+}
+.form-css{/*Clase*/
+    border-radius: 10px;
+    width: 95%;
+    margin: auto;
+}
+.form-footer, .form-css h3{
+    text-align: center;
+}
+.button-delete{
+    background-color: rgb(179, 0, 0);
+    border: none;
+    color: white;
+    padding: 8px 8px;/*vertical  horizontal*/
+    text-decoration: none;/*Resetea los estilos que añade el navegador*/
+    margin: 10px 0px;
+    border-radius: 4px;
+    cursor: pointer;/*Cambia el cursor cuando pasa por encima de un elemento*/
+    width: 100px;
+}
+.button-delete:hover{/*Cuando pas el evento(hover) cambie por los valores del elemento*/
+    background-color: rgb(218, 175, 175);
+    color: rgb(100, 19, 19);
+}
