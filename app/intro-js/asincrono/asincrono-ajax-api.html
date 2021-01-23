@@ -1,11 +1,14 @@
 <!--Estilos css del formulario-->
 <link type="text/css" rel="stylesheet" href="../../../src/css/form.css"/>
+<!--Estilo css de la tabla-->
+<link type="text/css" rel="stylesheet" href="../../../src/css/table.css"/>
 
 <!--Ejecucion de JS-->
 <div class="form-css">
     <h3>Formulario CSS</h3>
     <form>
         <div class="form-body">
+            <input type="hidden" name="form-indice" id="form-indice">
             <label for="nombre">Nombre</label><br><!--for: se vincula por medio del id del input-->
             <input type="text" name="form-nombre" id="form-nombre" placeholder="Escriba su nombre" required><br>
             <label for="apellido">Apellido</label><br>
@@ -21,18 +24,17 @@
         </div>
         <div class="form-footer">
             <button type="submit" id="form-submit">Enviar</button>
+            <button type="reset" id="form-reset">Limpiar</button>
         </div>
     </form>
 </div>
     
-<!--Carga la lista de Ajax-->
-<h5>Lista:</h5>
-<ul id="ajax-api-lista2"></ul>
+<!--Carga de los datos de Ajax-->
 <table>
     <thead>
         <th>Nombre</th>
-        <th>Apellido</th>
-        <th>Pais</th>
+        <!--<th>Apellido</th>
+        <th>Pais</th>-->
         <th>Acciones</th>
     </thead>
     <tbody id="ajax-api-lista"></tbody>
