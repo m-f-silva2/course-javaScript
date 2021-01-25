@@ -1,0 +1,38 @@
+/*diseño de botones*/
+.button-read, .button-edit, .button-delete{
+    border: none;
+    padding: 8px 0px;/*vertical  horizontal*/
+    text-decoration: none;/*Resetea los estilos que añade el navegador*/
+    margin: 10px 0px;
+    border-radius: 4px;
+    cursor: pointer;/*Cambia el cursor cuando pasa por encima de un elemento*/
+    width: 100px;
+}
+.button-read a{
+    text-decoration: none;
+    background-color: transparent;
+}
+.button-read{
+    background-color: rgb(70, 97, 150);
+    color: white;
+}
+.button-read:hover{/*Cuando pas el evento(hover) cambie por los valores del elemento*/
+    background-color: rgb(180, 193, 221);
+    color: rgb(29, 34, 112);
+}
+.button-edit{
+    background-color: #e8e800;
+    color: black;
+}
+.button-edit:hover{/*Cuando pas el evento(hover) cambie por los valores del elemento*/
+    background-color: #ebebbe;
+    color: rgb(121, 119, 0);
+}
+.button-delete{
+    background-color: rgb(179, 0, 0);
+    color: white;
+}
+.button-delete:hover{/*Cuando pas el evento(hover) cambie por los valores del elemento*/
+    background-color: rgb(218, 175, 175);
+    color: rgb(100, 19, 19);
+}

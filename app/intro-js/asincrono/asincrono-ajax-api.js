@@ -21,15 +21,17 @@ function getApi(usuarios){
     const v_usuRender = v_usuarios
 /** operador ternario(?): (valor a validar) ? (valor si existe) :(sino) (otro valor sino existe).*/
 /** indice: es parte de la estructura del .map se usa como si fuera un Id*/
-        .map((usuario,indice) => `<tr>
-                         <td>${usuario.nombre ? usuario.nombre : "vacioN"}</td>`+
-                         /*<td>${usuario.apellido ? usuario.apellido : "vacioA"}</td>
-                            <td>${usuario.pais ? usuario.pais : "vacioP"}</td>*/
-                        `<td>
-                            <button class="button-edit" data-indice=${indice}>Editar</button>
-                            <button class="button-delete" data-indice=${indice}>Eliminar</button>
-                        </td>
-                        </tr>`)
+        .map((usuario,indice) =>    
+            `<tr>
+                <td>${usuario.nombre ? usuario.nombre : "vacioN"}</td>
+                <td>
+                    <a href="asincrono-ajax-api-2.html?indice=${indice}">
+                        <button class="button-read">Ver</button>
+                    </a>
+                </td>
+                <td><button class="button-edit" data-indice=${indice}>Editar</button></td>
+                <td><button class="button-delete" data-indice=${indice}>Eliminar</button></td>
+            </tr>`)
         .join(""); 
     document.getElementById("ajax-api-lista").innerHTML = v_usuRender;
     v_botonDelete = document.getElementsByClassName("button-delete");
@@ -46,16 +48,24 @@ function getApi(usuarios){
 //Method POST: Envia un usuario
 function postApi(e){
     e.preventDefault();
+    let v_action = e.target.innerText,
+        v_method = 'POST';//por defecto
     const v_datos_post = {
         nombre: v_nombre.value,
         apellido: v_apellido.value,
         pais: v_pais.value
     };
-    console.log(v_datos_post);
+    
+    if(v_action === 'Editar'){
+        if(v_indice.value){
+            v_link = v_link+`/${v_indice.value}`;
+            v_method = 'PUT';
+        }
+    }
     fetch(
         v_link,
         {
-            method: 'POST',
+            method: v_method,
             headers: {
                 'Content-Type': 'application/json'
             },
@@ -64,9 +74,15 @@ function postApi(e){
     ).then(response => response.json())
      .then(respuesta =>{
          console.log('Succes:', respuesta);
-         refreshApi()//refrescar datos
+    /*  se quita '/' en la parte final de la url cuando se ha editado.*/
+         v_link = "http://bootcamp-dia-3.camilomontoyau.now.sh/usuarios";
+         resetForm();//reset campos formulario
+         refreshApi();//refrescar datos
         })
-     .catch(error => {console.log('Error:', error)})
+     .catch(error => {
+            console.log('Error:', error);
+            resetForm();//reset campos formulario
+        })
 }
 
 //Method PUT: editar usuario
@@ -82,8 +98,6 @@ function putApi(e){
         v_apellido.value = v_datos_put.apellido ? v_datos_put.apellido : '';
         v_pais.value = v_datos_put.pais ? v_datos_put.pais : '';
         v_botonSubmit.innerText = 'Editar';
-    }else{
-        v_botonSubmit.innerText = 'Enviar';
     }
 }
 
@@ -110,8 +124,16 @@ function refreshApi(){
         .then(respuesta => getApi(respuesta));
 }
 
+//Reset de campos del formulario
+function resetForm(){
+    v_botonSubmit.innerText = 'Enviar';
+    v_nombre.value = '';
+    v_apellido.value = '';
+    v_pais.value = '';
+}
+
 //Ejecutar funcion posApi
 v_botonSubmit.onclick = postApi;
 
-//resetear texto boton Enviar
-v_botonReset.onclick = ()=>{v_botonSubmit.innerText = "Enviar"};
+//resetear texto boton submit
+v_botonReset.onclick = resetForm;
