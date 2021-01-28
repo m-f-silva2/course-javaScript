@@ -4,10 +4,10 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Bootstrap CSS -->
-    <link href="css/bootstrap-4/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../../src/bootstrap-4/css/bootstrap.min.css" rel="stylesheet">
     <!--Font Awesome-->
-    <link href="css/fontawesome/css/all.min.css" rel="stylesheet">
-    <link href="css/fontawesome/css/v4-shims.min.css" rel="stylesheet">
+    <link href="../../src/fontawesome/css/all.min.css" rel="stylesheet">
+    <link href="../../src/fontawesome/css/v4-shims.min.css" rel="stylesheet">
     <!-- Style CSS -->
     <link href="css/style.css" rel="stylesheet">
     <title>Project</title>
@@ -22,14 +22,14 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="index.html">Mascotas<span class="sr-only">(current)</span></a>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Mascotas</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="veterinarios.html">Veterinarios</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="consultas.html">Consultas</a>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="consultas.html">Consultas<span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="duenos.html">Dueños</a>
@@ -57,6 +57,9 @@
                 </form>
             </div>
         </nav>
+        <div class="index-title">
+            <h2>Mascotas</h2>
+        </div>
         <!--Button insert-->
         <div class="index-button-insert">
             <!-- Button trigger modal -->
@@ -67,49 +70,14 @@
             <thead class="thead-dark">
                 <tr>
                     <th scope="col">#</th>
-                    <th scope="col">First</th>
-                    <th scope="col">Last</th>
-                    <th scope="col">Handle</th>
-                    <th scope="col">Acciones</th>
+                    <th scope="col">Tipo</th>
+                    <th scope="col">Nombre</th>
+                    <th scope="col">Dueño</th>
+                    <th scope="col"></th>
                 </tr>
             </thead>
-            <tbody>
-                <tr>
-                    <th scope="row">1</th>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
-                    <td>
-                        <div class="btn-group btn-group-sm" role="group" aria-label="Basic example">
-                            <button type="button" class="btn btn-primary"><i class="far fa-edit"></i></button>
-                            <button type="button" class="btn btn-danger"><i class="far fa-trash-alt"></i></button>
-                        </div>
-                    </td>
-                </tr>
-                <tr>
-                    <th scope="row">2</th>
-                    <td>Jacob</td>
-                    <td>Thornton</td>
-                    <td>@fat</td>
-                    <td>
-                        <div class="btn-group btn-group-sm" role="group" aria-label="Basic example">
-                            <button type="button" class="btn btn-primary"><i class="far fa-edit"></i></button>
-                            <button type="button" class="btn btn-danger"><i class="far fa-trash-alt"></i></button>
-                        </div>
-                    </td>
-                </tr>
-                <tr>
-                    <th scope="row">3</th>
-                    <td>Larry</td>
-                    <td>the Bird</td>
-                    <td>@twitter</td>
-                    <td>
-                        <div class="btn-group btn-group-sm" role="group" aria-label="Basic example">
-                            <button type="button" class="btn btn-primary"><i class="far fa-edit"></i></button>
-                            <button type="button" class="btn btn-danger"><i class="far fa-trash-alt"></i></button>
-                        </div>
-                    </td>
-                </tr>
+            <tbody id="table-tbody-mascotas">
+                <!--Carga de lista de mascotas-->
             </tbody>
         </table>
     </div>
@@ -125,10 +93,10 @@
                 </div>
                 <div class="modal-body">
                     <!--Form agregar-->
-                    <form>
+                    <form id="index-insert-form">
                         <div class="form-row" style="margin-bottom: 5px;">
                             <div class="col">
-                                <select class="form-control" id="exampleFormControlSelect1">
+                                <select class="form-control" id="index-insert-select">
                                     <option>Tipo de animal</option>
                                     <option>Perro</option>
                                     <option>Gato</option>
@@ -138,10 +106,10 @@
                         </div>
                         <div class="form-row">
                             <div class="col">
-                                <input type="text" class="form-control" placeholder="Nombre">
+                                <input type="text" class="form-control" id="index-insert-nombre" placeholder="Nombre">
                             </div>
                             <div class="col">
-                                <input type="text" class="form-control" placeholder="Last name">
+                                <input type="text" class="form-control" id="index-insert-dueno" placeholder="Dueño">
                             </div>
                         </div>
                     </form>
@@ -154,13 +122,13 @@
         </div>
     </div>
     <!--Files JavaScript-->
-    <script src="js/consultas.js"></script>
+    <script src="js/index.js"></script>
     <!-- jQuery first, then Popper.js, then Bootstrap JS-->
-    <script src="css/bootstrap-4/js/jquery-3.2.1.slim.min.js"></script>
-    <script src="css/bootstrap-4/js/popper.min.js"></script>
-    <script src="css/bootstrap-4/js/bootstrap.min.js"></script>
+    <script src="../../src/bootstrap-4/js/jquery-3.2.1.slim.min.js"></script>
+    <script src="../../src/bootstrap-4/js/popper.min.js"></script>
+    <script src="../../src/bootstrap-4/js/bootstrap.min.js"></script>
     <!--Font Awesome-->
-    <script src="css/fontawesome/js/all.min.js"></script>
-    <script src="css/fontawesome/js/v4-shims.min.js"></script>
+    <script src="../../src/fontawesome/js/all.min.js"></script>
+    <script src="../../src/fontawesome/js/v4-shims.min.js"></script>
 </body>
 </html>
