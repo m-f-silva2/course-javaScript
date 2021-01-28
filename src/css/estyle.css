@@ -98,6 +98,9 @@
 #contenedor-img-js::before{
     background-image: url("../img/img_js.jpeg");
 }
+#contenedor-img-project::before{
+    background-image: url("../img/img_project.jpeg");
+}
 /*Index js*/
 #contenedor-img-js-intro::before{
     background-image: url("../img/img_js_intro.png");

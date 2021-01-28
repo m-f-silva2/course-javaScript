@@ -29,8 +29,8 @@ function refreshApi(){
 
 function getApi(){
     v_usuRender =   `<tr><td>Nombre: </td><td>${v_usuario.nombre ? v_usuario.nombre : "vacioN"}</td></tr>
-                    <tr><td>Apellido: </td><td>${v_usuario.apellido ? v_usuario.apellido : "vacioN"}</td></tr>
-                    <tr><td>Pais: </td><td>${v_usuario.pais ? v_usuario.pais : "vacioN"}</td></tr>
+                    <tr><td>Apellido: </td><td>${v_usuario.apellido ? v_usuario.apellido : "vacioA"}</td></tr>
+                    <tr><td>Pais: </td><td>${v_usuario.pais ? v_usuario.pais : "vacioP"}</td></tr>
                     </tr>`; 
     v_tabla.innerHTML = v_usuRender;
 }
