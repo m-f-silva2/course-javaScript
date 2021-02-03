@@ -57,59 +57,58 @@
                 </form>
             </div>
         </nav>
-        <div class="index-title">
-            <h2>Mascotas</h2>
+        <div class="pag-title">
+            <h2>Consultas</h2>
         </div>
         <!--Button insert-->
-        <div class="index-button-insert">
+        <div class="pag-button-insert">
             <!-- Button trigger modal -->
-            <button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModal">Agregar</button>
+            <button type="button" class="btn btn-success" data-toggle="modal" data-target="#consultasModal">Agregar</button>
         </div>
         <!--Table-->
-        <table class="table table-stripped table-hover">
-            <thead class="thead-dark">
-                <tr>
-                    <th scope="col">#</th>
-                    <th scope="col">Tipo</th>
-                    <th scope="col">Nombre</th>
-                    <th scope="col">Dueño</th>
-                    <th scope="col"></th>
-                </tr>
-            </thead>
-            <tbody id="table-tbody-mascotas">
-                <!--Carga de lista de mascotas-->
-            </tbody>
-        </table>
+        <div class="table-responsive">
+            <table class="table table-stripped table-hover">
+                <thead class="thead-dark">
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col"></th>
+                        <th scope="col"></th>
+                        <th scope="col"></th>
+                        <th scope="col"></th>
+                    </tr>
+                </thead>
+                <tbody id="table-tbody-consultas">
+                    <!--Carga de lista de consultas-->
+                </tbody>
+            </table>
+        </div>
     </div>
     <!-- Modal -->
-    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal fade" id="consultasModal" tabindex="-1" role="dialog" aria-labelledby="consultasModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Agregar Mascota</h5>
+                    <h5 class="modal-title" id="consultasModalLabel">Agregar Consulta</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
                 <div class="modal-body">
                     <!--Form agregar-->
-                    <form id="index-insert-form">
+                    <form id="consultas-insert-form">
                         <div class="form-row" style="margin-bottom: 5px;">
                             <div class="col">
-                                <select class="form-control" id="index-insert-select">
-                                    <option>Tipo de animal</option>
-                                    <option>Perro</option>
-                                    <option>Gato</option>
-                                    <option>Loro</option>
+                                <select class="form-control" id="consultas-insert-select">
+                                    <option>Seleccione</option>
                                 </select>
                             </div>
                         </div>
                         <div class="form-row">
                             <div class="col">
-                                <input type="text" class="form-control" id="index-insert-nombre" placeholder="Nombre">
+                                <input type="text" class="form-control" id="consultas-insert-nombre" placeholder="Nombre">
                             </div>
                             <div class="col">
-                                <input type="text" class="form-control" id="index-insert-dueno" placeholder="Dueño">
+                                <input type="text" class="form-control" id="consultas-insert-dueno" placeholder="Dueño">
                             </div>
                         </div>
                     </form>
@@ -122,7 +121,7 @@
         </div>
     </div>
     <!--Files JavaScript-->
-    <script src="js/index.js"></script>
+    <script src="js/consultas.js"></script>
     <!-- jQuery first, then Popper.js, then Bootstrap JS-->
     <script src="../../src/bootstrap-4/js/jquery-3.2.1.slim.min.js"></script>
     <script src="../../src/bootstrap-4/js/popper.min.js"></script>

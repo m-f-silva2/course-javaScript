@@ -1,6 +1,12 @@
-.index-title{
+/*Titulo principal del pag.*/
+.pag-title{
     text-align: center;
 }
-.index-button-insert{
+/*Boton Agregar*/
+.pag-button-insert{
     margin: 10px 0px 4px 2px;/*arriba derecha abajo izquierda*/
+}
+/*Campos de formulario de la modal*/
+.form-row{
+    margin-bottom: 5px;
 }

@@ -1,7 +1,7 @@
-const   v_listaMascotas = document.getElementById('table-tbody-index'),
+const   v_listaMascotas = document.getElementById('table-tbody-mascotas'),
         v_btnAgregar = document.getElementById('index-btnAgregar'),
         v_form = document.getElementById('index-form'),
-        v_formTitle = document.getElementById('indexModalLabel'),
+        v_formTitle = document.getElementById('formModalLabel'),
         v_index = document.getElementById('index-form-indice'),
         v_tipo = document.getElementById('index-form-select'),
         v_nombre = document.getElementById('index-form-nombre'),
@@ -25,7 +25,7 @@ function renderMascotas(){
                 <td>${mascota.dueno}</td>
                 <td>
                     <div class="btn-group btn-group-sm" role="group" aria-label="Basic example">
-                        <button type="button" class="btn btn-primary index-edit" data-toggle="modal" data-target="#indexModal"><i class="far fa-edit"></i></button>
+                        <button type="button" class="btn btn-primary index-edit" data-toggle="modal" data-target="#formModal"><i class="far fa-edit"></i></button>
                         <button type="button" class="btn btn-danger index-delete"><i class="far fa-trash-alt"></i></button>
                     </div>
                 </td>
@@ -57,6 +57,7 @@ function post(e){
             break;
     }
     renderMascotas();
+    console.log(ob_datosPost);
 }
 
 //PUT: editar datos

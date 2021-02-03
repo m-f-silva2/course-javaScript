@@ -57,66 +57,69 @@
                 </form>
             </div>
         </nav>
-        <div class="index-title">
+        <div class="pag-title">
             <h2>Mascotas</h2>
         </div>
         <!--Button insert-->
-        <div class="index-button-insert">
+        <div class="pag-button-insert">
             <!-- Button trigger modal -->
-            <button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModal">Agregar</button>
+            <button type="button" class="btn btn-success" data-toggle="modal" data-target="#indexModal" id="index-btnAgregar">Agregar</button>
         </div>
         <!--Table-->
-        <table class="table table-stripped table-hover">
-            <thead class="thead-dark">
-                <tr>
-                    <th scope="col">#</th>
-                    <th scope="col">Tipo</th>
-                    <th scope="col">Nombre</th>
-                    <th scope="col">Dueño</th>
-                    <th scope="col"></th>
-                </tr>
-            </thead>
-            <tbody id="table-tbody-mascotas">
-                <!--Carga de lista de mascotas-->
-            </tbody>
-        </table>
+        <div class="table-responsive">
+            <table class="table table-stripped table-hover">
+                <thead class="thead-dark">
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Tipo</th>
+                        <th scope="col">Nombre</th>
+                        <th scope="col">Dueñ@</th>
+                        <th scope="col"></th>
+                    </tr>
+                </thead>
+                <tbody id="table-tbody-index">
+                    <!--Carga de lista de mascotas-->
+                </tbody>
+            </table>
+        </div>
     </div>
     <!-- Modal -->
-    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal fade" id="indexModal" tabindex="-1" role="dialog" aria-labelledby="indexModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Agregar Mascota</h5>
+                    <h5 class="modal-title" id="indexModalLabel">Agregar Mascota</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
                 <div class="modal-body">
                     <!--Form agregar-->
-                    <form id="index-insert-form">
-                        <div class="form-row" style="margin-bottom: 5px;">
+                    <form id="index-form">
+                        <input type="hidden" id="index-form-indice">
+                        <div class="form-row">
                             <div class="col">
-                                <select class="form-control" id="index-insert-select">
-                                    <option>Tipo de animal</option>
-                                    <option>Perro</option>
-                                    <option>Gato</option>
-                                    <option>Loro</option>
+                                <select class="form-control" id="index-form-select">
+                                    <option value="">Tipo de animal</option>
+                                    <option value="Perro">Perro</option>
+                                    <option value="Gato">Gato</option>
+                                    <option value="Loro">Loro</option>
                                 </select>
                             </div>
                         </div>
                         <div class="form-row">
                             <div class="col">
-                                <input type="text" class="form-control" id="index-insert-nombre" placeholder="Nombre">
+                                <input type="text" class="form-control" id="index-form-nombre" placeholder="Nombre">
                             </div>
                             <div class="col">
-                                <input type="text" class="form-control" id="index-insert-dueno" placeholder="Dueño">
+                                <input type="text" class="form-control" id="index-form-dueno" placeholder="Dueño">
                             </div>
                         </div>
                     </form>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-                    <button type="button" class="btn btn-primary">Guardar</button>
+                    <button type="button" class="btn btn-primary" id="index-form-btnSubmit" data-dismiss="modal">Guardar</button>
                 </div>
             </div>
         </div>
